@@ -1,0 +1,52 @@
+<meta charset="UTF-8">
+<h1>Hola este es el sitio web de Oscar</h1>
+<br>
+<script>
+
+	function saltoLinea() {
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<hr>");
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function imprimir(frase) {
+		document.write(frase);
+		saltoLinea();
+	}
+
+	function calcularImc(peso, altura) {
+
+		return (peso / (altura * altura));
+
+	}
+	var nombre = prompt("Cual es su nombre");
+	var peso = prompt("Cual es su peso");
+	var altura = prompt("Cual es su altura");
+	var imc = calcularImc(peso, altura)
+
+	imprimir("El IMC de " + nombre + " es: " + imc);
+
+	if (imc < 18.5) {
+		imprimir(nombre + " su Imc esta por debajo de lo recomendado");
+	}
+
+	if (imc > 18.5) {
+		if (imc <= 24.9) {
+
+			imprimir(nombre + " su Imc esta adecuado a lo recomendado");
+		}
+	}
+
+	if (imc >= 25) {
+		if (imc <= 29.9) {
+
+			imprimir(nombre + " su Imc esta por encima de lo recomendado, y tiene sobrepeso");
+		}
+	}
+
+
+
+</script>

@@ -1,0 +1,8 @@
+
+Nombre: oscar
+Edad:24
+ eres mayor de edad
+Nombre: orge
+Edad:50
+ eres mayor de edad
+Manuella Rojas

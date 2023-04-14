@@ -1,0 +1,41 @@
+<meta charset="UTF-8">
+<h1>Hola de nuevo</h1>
+<br>
+<script>
+
+	function saltoLinea() {
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<hr>");
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function imprimir(frase) {
+		document.write(frase);
+		saltoLinea();
+	}
+
+    var victorias = parseInt(prompt("Número de Victorias"));
+    var empates = parseInt(prompt("Número de empates"));
+    var total = (victorias*3 + empates);
+
+    imprimir("El total de puntos  es " + total);
+
+    if (total < 20){
+        imprimir("El rendimiento de elquipo bajo este año");
+
+    }
+
+    if (total == 20){
+        imprimir("El rendimiento de elquipo se mantiene igual este año");
+
+    }
+
+    if (total > 20){
+        imprimir("El rendimiento de elquipo aumento este año");
+
+    }
+
+</script>

@@ -1,0 +1,11 @@
+Codigo =int(input(""))
+Nombre =(input(""))
+Cantidad =float(input(""))
+Vunitario =float(input(""))
+Vproducto =(Cantidad*Vunitario)
+iva =(Vproducto*19)/100
+Vtotal =(Vproducto+iva)
+print(Codigo)
+print(Nombre)
+print(Vproducto)
+print(Vtotal)

@@ -1,0 +1,52 @@
+<meta charset="UTF-8">
+<h1>Algorimo para calcular la tabla de multiplicacion de un numero</h1>
+<br>
+
+<script>
+
+/*let num = 5; // número del que se quiere obtener la tabla de multiplicación
+
+for (let i = 1; i <= 10; i++) {
+  let result = num * i;
+  console.log(num + " x " + i + " = " + result);
+}
+*/
+function saltoLinea() {
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<hr>");
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function imprimir(frase) {
+		document.write(frase);
+		saltoLinea();
+	}
+
+// Con for
+var num = parseInt(prompt("De que numero desea saber la tabla de multiplicar"))
+
+for (let i = 1; i <= 10; i++) {
+  let result = num * i;
+  imprimir(num + " x " + i + " = " + result);
+}
+
+// Con while
+var num = parseInt(prompt("De que numero desea saber la tabla de multiplicar"))
+var i = 1;
+
+while (i <=10){
+  imprimir(num + " x " + i + " = " + (num*i));
+  i++
+}
+
+
+
+
+</script>
+
+
+
+
