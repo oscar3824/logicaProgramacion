@@ -5,25 +5,52 @@
 <script>
 
     function saltarLinea() {
-        document.write("<br>");    
-        document.write("<br>");    
-        document.write("<br>");    
-    }  
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
 
     function imprimir(frase) {
         document.write(frase);
         saltarLinea();
     }
 
-    var numeroPensado = Math.round(Math.random()*10);
-    var numeroLanzado = parseInt(prompt("Ingrese un número entre 0-10"))
+    var intentos = 3;
+    var contador = 1;
 
-    if (numeroPensado == numeroLanzado){
-        imprimir("usted acertó")
+    var numeroPensado = Math.round(Math.random() * 10);
+    alert("Usted tiene 3 intentos para acertar el numero")
+
+    while (contador <= intentos) {
+
+        var numeroLanzado = parseInt(prompt("Ingrese un número entre 0-10"))
+
+        if (numeroPensado == numeroLanzado) {
+            imprimir("usted acertó el intento")
+            break;
+        }
+
+        else {
+            alert("usted erró en el intento: " + contador);
+        }
+        contador++
+
+        if (contador == 3){
+            alert(" Heyyy te queda solo un intento")
+        
+        }
     }
 
-    else {
-        imprimir("usted erró, el número pensado era " + numeroPensado)    
-    }
+    imprimir("Fin del juego")
+
+    if (numeroPensado == numeroLanzado) {
+            imprimir("usted acertó el intento" + "El numero pensado era" + numeroPensado);
+           
+        }
+
+        else {
+            imprimir("Rayosss perdiste :( , el numero pensado era " + numeroPensado);
+        }
+        contador++
 
 </script>
