@@ -1,0 +1,74 @@
+<meta charset="UTF-8">
+
+<input />
+<button>Verificar si acerto el numero</button>
+
+<script>
+
+    function aleatorio() {
+        return Math.round(Math.random() * 10);
+    }
+
+    function sortearNumeros(cantidad) {
+        var numeros = [];
+        var cont = 1;
+
+        while (cont <= cantidad) {
+            numeroAleatoreo = aleatorio();
+            console.log(numeroAleatoreo)
+            var encontrado = false;
+
+            if (numeroAleatoreo != 0) {
+
+                for (var i = 0; i < numeros.length; i++) {
+                    if (numeroAleatoreo == numeros[i]) {
+                        encontrado = true
+                        break;
+                    }
+                }
+                if (encontrado == false) {
+                    numeros.push(numeroAleatoreo);
+                    cont++
+
+                }
+
+            }
+
+        }
+
+        return numeros;
+    }
+
+
+    var numeros = sortearNumeros(4)
+    console.log(numeros);
+    var input = document.querySelector("input");
+    input.focus();
+
+
+    function verificar() {
+
+        var encontrado = false;
+
+        for (var i = 0; i < numeros.length; i++) {
+
+            if (parseInt(input.value) == numeros[i]) {
+
+                alert(" Bravoo acertaste")
+                encontrado = true;
+                break;
+
+            }
+        }
+        if (encontrado == false) {
+            alert("Perdiste")
+        }
+
+        input.value = "";
+        input.focus();
+    }
+
+    var button = document.querySelector("button");
+    button.onclick = verificar;
+
+</script>
