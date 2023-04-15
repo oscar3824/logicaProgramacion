@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<h1>Media edades</h1>
+<br>
+<script>
+
+	function saltoLinea() {
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<hr>");
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function imprimir(frase) {
+		document.write(frase);
+		saltoLinea();
+	}
+
+	var totalPersonas = parseInt(prompt("Ingrese el numero de personas de quien conoce su edad: "));
+    contador = 1;
+    totalEdad = 0;
+
+    while (contador <= totalPersonas){
+        var edad = parseInt(prompt("Ingrese  edad de la persona: "));
+        var totalEdad = totalEdad + edad;
+        contador++
+    }
+    mediaEdades = (totalEdad/totalPersonas);
+    imprimir("La mediia de las edades de esta familia es de: " + mediaEdades);
+</script>
