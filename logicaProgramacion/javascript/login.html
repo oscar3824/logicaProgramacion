@@ -1,0 +1,17 @@
+<meta charset="UTF-8">
+<h1>Programando...</h1>
+<script>
+
+    var inicioDeSesionRegistrado = "oscar@web";
+    var contrasenhaRegistrada = "03/30/1998";
+
+    var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+    var contrasenhaIngresada = prompt("Ingrese su contraseña");
+
+    if( inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada ) {
+        imprimir("Bienvenido al sistema " + inicioDeSesionIngresado);
+    } else {
+        alert("inicio de sesión inválido. Favor intente de nuevo");
+    }
+
+</script>
