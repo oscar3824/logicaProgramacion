@@ -1,12 +1,9 @@
 
-package java;
+package logicaJava;
 
 import java.util.Scanner;
 
-/**
- *
- * @author OSCAR CAMACHO
- */
+
 public class hacer {
     public static void main(String [] args){
         int i, estudiantes=0;

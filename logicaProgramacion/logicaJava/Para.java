@@ -1,12 +1,8 @@
 
-package java;
+package logicaJava;
 
 import java.util.Scanner;
 
-/**
- *
- * @author OSCAR
- */
 public class Para {
     public static void main(String [] args){
         int i, estudiantes;

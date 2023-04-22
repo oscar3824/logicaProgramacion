@@ -1,10 +1,7 @@
 
-package java;
+package logicaJava;
 
-/**
- *
- * @author OSCAR
- */
+
 public class Switch {
     public static void main(String[] args){
         String    nombreDia = "";
@@ -32,3 +29,4 @@ public class Switch {
     }
     
 }
+ 

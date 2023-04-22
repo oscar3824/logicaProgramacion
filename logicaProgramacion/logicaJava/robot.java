@@ -1,8 +1,8 @@
-package java;
+package logicaJava;
 
     import java.util.Scanner;
 
-    public class Robot {
+    public class robot {
       public static int maxInstructions() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Ingrese los planes de movimiento del robot (L, R, U, D): ");

@@ -1,5 +1,5 @@
 
-package java;
+package logicaJava;
 
 import java.util.Scanner;
 

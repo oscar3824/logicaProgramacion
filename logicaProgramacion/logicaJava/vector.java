@@ -1,15 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package java;
+
+package logicaJava;
 
 import java.util.Scanner;
 
-/**
- *
- * @author OSCAR
- */
+
+ 
 public class vector {
     public static void main(String [] args){
         // declaración de  variable del tipo arreglo
