@@ -1,0 +1,55 @@
+
+.titulo principal{
+    text-align: center;
+    
+}
+
+.principal {
+    background: #b3b1b1;
+    padding: 20px;
+
+}
+
+h1 {
+    text-align: center;
+}
+
+#oscar {
+    width: 20%;
+
+}
+
+p {
+    text-align: center;
+}
+
+em strong {
+    color: brown;
+}
+
+#mision {
+    font-size: 20px;
+}
+
+.cualidades{
+    background-color: rgb(107, 103, 110);
+    padding: 30px;
+}
+
+h2{
+    text-align: center;
+}
+
+.items{
+    font-style: italic;
+}
+
+ul{
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+}
+#cualidades{
+    width: 15%;
+}
