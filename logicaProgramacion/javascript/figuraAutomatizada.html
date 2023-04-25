@@ -1,0 +1,66 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    pincel.fillStyle = "grey";
+    pincel.fillRect(0, 0, 600, 400);
+    var xAleatoreo;
+    var yAleatoreo;
+    var radio = 10;
+
+    function dibujarCircunferencia(x, y, radio, color) {
+        pincel.fillStyle = color;
+        pincel.beginPath();
+        pincel.arc(x, y, radio, 0, 2 * Math.PI);
+        pincel.fill();
+    }
+
+    function limpiarPantalla() {
+
+        pincel.clearRect(0, 0, 600, 400);
+    }
+
+    var x = 0;
+
+    function disenharObjetivo(x, y) {
+
+        dibujarCircunferencia(x, y, radio + 20, "red")
+        dibujarCircunferencia(x, y, radio + 10, "white")
+        dibujarCircunferencia(x, y, radio, "red")
+    }
+
+    function sortearPosicion(maximo) {
+        return Math.floor(Math.random() * maximo);
+    }
+
+    function actualizarPantalla() {
+
+        limpiarPantalla();
+        xAleatoreo = sortearPosicion(600);
+        yAleatoreo = sortearPosicion(400);
+        disenharObjetivo(xAleatoreo, yAleatoreo);
+        x++;
+    }
+
+    setInterval(actualizarPantalla, 1000);
+
+    function disparar(evento) {
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;
+
+        if ((x < xAleatoreo + radio) &&
+            (x > xAleatoreo - radio) &&
+            (y < yAleatoreo + radio) &&
+            (y > yAleatoreo - radio) 
+            ) {
+            alert("Tiro Acertado")
+        }
+    }
+
+    pantalla.onclick = disparar;
+
+
+</script>
